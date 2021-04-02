@@ -1,0 +1,10 @@
+.logo {
+    font-weight: 700;
+}
+.userAvatar {
+    border-radius: 50%;
+    height: 40px;
+}
+.nav {
+    margin-right: 1rem;
+}
