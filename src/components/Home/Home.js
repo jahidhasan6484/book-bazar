@@ -8,7 +8,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('http://localhost:5000/books')
+    fetch('https://arcane-forest-00339.herokuapp.com/books')
       .then(res => res.json())
       .then(data => {
         setBooks(data)

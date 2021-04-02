@@ -5,14 +5,14 @@ const ManageBooks = () => {
     const [manageBooks, setManageBooks] = useState([])
 
     useEffect(() => {
-        const url = 'http://localhost:5000/books'
+        const url = 'https://arcane-forest-00339.herokuapp.com/books'
         fetch(url)
             .then(res => res.json())
             .then(data => setManageBooks(data))
     }, [manageBooks])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://arcane-forest-00339.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

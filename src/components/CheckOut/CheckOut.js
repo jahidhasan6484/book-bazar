@@ -12,7 +12,7 @@ const CheckOut = () => {
 
     const { id } = useParams();
     useEffect(() => {
-        fetch('http://localhost:5000/books')
+        fetch('https://arcane-forest-00339.herokuapp.com/books')
             .then(res => res.json())
             .then(data => setBook(data))
     }, [id])
@@ -23,15 +23,11 @@ const CheckOut = () => {
 
     const handleCheckout = () => {
         const newBooking = { ...loggedInUser, bookName: selectedBook?.name, authorName: selectedBook?.authorName, price: selectedBook?.price, date: new Date() }
-        fetch('http://localhost:5000/addBooking', {
+        fetch('https://arcane-forest-00339.herokuapp.com/addBooking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newBooking)
         })
-        // .then(res => res.json())
-        // .then(data => {
-        //     console.log(data);
-        // })
     }
 
     return (
