@@ -37,7 +37,6 @@ const AddBook = () => {
         )
             .then(function (response) {
                 const avatar = response.data.data.display_url;
-                console.log("before", response.data.data.display_url);
                 setImageURL(avatar);
             })
             .catch(function (error) {

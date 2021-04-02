@@ -46,12 +46,6 @@ function App() {
           <PrivateRoute path="/admin">
             <Admin></Admin>
           </PrivateRoute>
-          {/* <Route path="/manageBooks">
-            <ManageBooks></ManageBooks>
-          </Route>
-          <Route path="/addBooks">
-            <AddBook></AddBook>
-          </Route> */}
           <Route path="/login">
             <Login></Login>
           </Route>
